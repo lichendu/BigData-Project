@@ -31,3 +31,10 @@ def upload_file():
         f.save('/var/www/uploads/uploaded_file.txt')
   
 
+def me_api():
+    user = get_current_user()
+    return {
+        "username": user.username,
+        "theme": user.theme,
+        "image": url_for("user_image", filename=user.image),
+    }
