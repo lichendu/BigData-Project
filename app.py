@@ -22,3 +22,12 @@ def hello():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
+    
+    
+@app.route('/upload', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        f = request.files['the_file']
+        f.save('/var/www/uploads/uploaded_file.txt')
+  
+
