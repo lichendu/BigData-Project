@@ -28,14 +28,9 @@ if __name__ == "__main__":
 def upload_file():
     if request.method == 'POST':
         f = request.files['the_file']
-        f.save('/var/www/uploads/uploaded_file.txt')
+        #在这里实现load——model
+        return
+       
   
 
-def me_api():
-    user = get_current_user()
-    return {
-        "username": user.username,
-        "theme": user.theme,
-        "image": url_for("user_image", filename=user.image),
-    }
-def
+
