@@ -38,3 +38,4 @@ def me_api():
         "theme": user.theme,
         "image": url_for("user_image", filename=user.image),
     }
+def
