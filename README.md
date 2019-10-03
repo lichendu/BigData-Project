@@ -8,7 +8,7 @@
 ###### Pull the documents and ckpt file from GitHub
 ###### Use the following curl command to upload picture. Notice: The picture should contain a single digit number and be in 28px*28px.
     curl -F "file=@[filename]" localhost:5000/upload
-###### Try to use the picture called "test1.png" and "test2.png" for testing. For more code running process, Please see Video.mov.
+###### Try to use the picture called "test1.png" and "test2.png" for testing. For more code running process, Please see Video.mp4.
 
                       
 ###### For more details about the project, Please see Project report.pdf 
