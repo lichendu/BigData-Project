@@ -2,11 +2,11 @@
 
 
 ## Table of Context
-    *General Information
-    *Project Description
-    *Technologies
-    *Set Up
-    * Prediction
+  * General Information
+  * Project Description
+  * Technologies
+  * Set Up
+  * Prediction
     
 ## General Information
 Welcome! This MNIST project received assistance from Dr. Zhang Fan from MIT LIGO Lab.
@@ -24,7 +24,7 @@ This project is created with the following:
 * Flask                1.1.1  
 * tensorflow           1.14.0 
 
-##Set Up
+## Set Up
 To run this project, you should install the technologies above in the right version. And then pull the documents and ckpt file from GitHub. 
 
 
@@ -37,5 +37,4 @@ Then, Use the following curl command to upload picture. subsitute the [filename]
 As the result, you will have a output which is a digit number from 0-9.
 For more code running process, Please see Video.mp4.
 
-                      
 For more details about the project, Please see Project report.pdf 
