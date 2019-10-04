@@ -6,12 +6,12 @@ Welcome! This MNIST project received assistance from Dr. Zhang Fan from MIT LIGO
 
 
 ## Language Used
-Python               3.6
-Flask                1.1.1
-tensorflow           1.14.0   
+Python               3.6  
 redis                3.3.8  
 numpy                1.16.5   
 Pillow               6.1.0  
+Flask                1.1.1  
+tensorflow           1.14.0 
 
 ## Model Prediction 
 ###### Pull the documents and ckpt file from GitHub
