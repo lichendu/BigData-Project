@@ -2,13 +2,13 @@
 
 
 ## Table of Context
-  * General Information
+  * General Information and Motivation
   * Project Description
   * Technologies
   * Set Up
   * Prediction
     
-## General Information
+## General Information and Motivation
 Welcome! This MNIST project received assistance from Dr. Zhang Fan from MIT LIGO Lab.
 
 ## Project Description
