@@ -27,17 +27,19 @@ This project is created with the following:
 ## Set Up
 To run this project, you should install the technologies above in the right version. And then pull the documents and ckpt file from GitHub. 
 
-## Example of Use
+## Code Example
     def loadmodel(img_path=None, ckpt_dir="./ckpt"): # here need to specify the location of your ckpt folder
         if img_path is None:
             return 
+            
         # 1. define a session
         sess = tf.Session()
-        # 2.1 checkpoint dir
+        
+        # 2. checkpoint dir
         ckpt_dir = ckpt_dir
-        # 2.2 find the lastest checkpoint path
         ckpt = tf.train.get_checkpoint_state(ckpt_dir)  
         print(ckpt)
+        
         # 3. load
         if ckpt and ckpt.model_checkpoint_path:
             # 3.1 coumpute graph
