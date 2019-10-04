@@ -6,6 +6,7 @@
   * Project Description
   * Technologies
   * Set Up
+  * Code Example
   * Prediction
     
 ## General Information and Motivation
@@ -65,8 +66,8 @@ To run this project, you should install the technologies above in the right vers
 
 
 ## Prediction 
-Notice: The picture should contain a single digit number and be in 28px*28px. You can either draw a hand-writing number in a picture or use the testing pictures called "test1.png" and "test2.png".
-Then, Use the following curl command to upload picture. subsitute the [filename] with the name of your picture or the name of test picture. 
+Notice: The picture should contain a single digit number and be in 28px* 28px. You can either draw a hand-writing number in a picture or use the testing pictures called "test1.png" and "test2.png".
+Then, Use the following curl command to upload picture. Please subsitute the [filename] with the name of your picture or the name of test picture. 
 
        curl -F "file=@[filename]" localhost:5000/upload
 
