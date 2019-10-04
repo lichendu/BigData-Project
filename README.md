@@ -27,10 +27,44 @@ This project is created with the following:
 ## Set Up
 To run this project, you should install the technologies above in the right version. And then pull the documents and ckpt file from GitHub. 
 
+## Example of Use
+    def loadmodel(img_path=None, ckpt_dir="./ckpt"): # here need to specify the location of your ckpt folder
+        if img_path is None:
+            return 
+        # 1. define a session
+        sess = tf.Session()
+        # 2.1 checkpoint dir
+        ckpt_dir = ckpt_dir
+        # 2.2 find the lastest checkpoint path
+        ckpt = tf.train.get_checkpoint_state(ckpt_dir)  
+        print(ckpt)
+        # 3. load
+        if ckpt and ckpt.model_checkpoint_path:
+            # 3.1 coumpute graph
+            saver = tf.train.import_meta_graph(ckpt.model_checkpoint_path + ".meta", clear_devices=True)
+            # 3.2 load weights
+            saver.restore(sess, ckpt.model_checkpoint_path) 
 
-## Model Prediction 
+        # 4. load input and label tensor
+        x_op = sess.graph.get_tensor_by_name("Placeholder:0")
+        predict_op = sess.graph.get_tensor_by_name("Softmax:0")
+
+        # 5. read inputs
+        img = Image.open(img_path).convert('L')     
+        flatten_img = np.reshape(img, 784)
+        x = np.array([1 - flatten_img])
+
+        # 6. prediction
+        y = sess.run(predict_op, feed_dict={x_op: x})
+        result = np.argmax(y[0])
+        
+        return result
+
+
+
+## Prediction 
 Notice: The picture should contain a single digit number and be in 28px*28px. You can either draw a hand-writing number in a picture or use the testing pictures called "test1.png" and "test2.png".
-Then, Use the following curl command to upload picture. subsitute the [filename]with the name of your picture or the name of test picture. 
+Then, Use the following curl command to upload picture. subsitute the [filename] with the name of your picture or the name of test picture. 
 
        curl -F "file=@[filename]" localhost:5000/upload
 
