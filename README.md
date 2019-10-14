@@ -10,7 +10,7 @@
   * Prediction
     
 ## General Information and Motivation
-Welcome! This MNIST project is completed with the instructions provided by Dr. Zhang Fan from MIT LIGO Lab. I learned the principle of the Tensoflow learning model and many uses of languages from Dr. Fan’s lecture. Many of them are relating and necessary to the project, and others are widely used in the area of Big Data. Thus, As a beginner to this area, I designed this project to help users to recognize hand-writing numbers.
+Welcome! This MNIST project was completed with the instructions provided by Dr. Zhang Fan from MIT LIGO Lab. I learned the principle of the Tensoflow learning model and many uses of languages from Dr. Fan’s lecture. Many of them are relating and necessary to the project, and others are widely used in the area of Big Data. Thus, As a beginner to this area, I designed this project to help users to recognize hand-writing numbers.
 
 ## Project Description
 This project uses the TensorFlow training model and MNIST database to help users to recognize a single digit number (0-9) from a picture which contains a hand-writing number. The users can use the curl- X POST command to upload their test picture (which should be in 28px* 28px) to the localhost URL address. Then, the project will use Flask to handle the picture upload requests and will run the prediction for the digit number it contains. MNIST is a large database contains more than 60,000 training images. Applying TensorFlow to the model, users can receive high accuracy digital number outputs from their uploaded pictures. 
